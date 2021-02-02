@@ -15,12 +15,14 @@ describe('Routes', () => {
     it('show info about api', async () => {
       const response = await app.get('/api/movies');
       expect(response.status).to.equal(200);
+      expect(response.body.length).to.equal(4);
     });
   });
   describe('GET /api/actors', () => {
     it('show info about api', async () => {
       const response = await app.get('/api/actors');
-      expect(response.status).to.equal(200);
+      // console.log(response.body);
+      expect(response.body.length).to.equal(5);
     });
   });
 });
