@@ -10,6 +10,18 @@ describe('Routes', () => {
       expect(response.status).to.equal(200);
     });
   });
+  describe('GET /api/movies', () => {
+    it('show info about api', async () => {
+      const response = await app.get('/api/movies');
+      expect(response.status).to.equal(200);
+    });
+  });
+  describe('GET /api/actors', () => {
+    it('show info about api', async () => {
+      const response = await app.get('/api/actors');
+      expect(response.status).to.equal(200);
+    });
+  });
 });
 
 describe('Database', () => {
